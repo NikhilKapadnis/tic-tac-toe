@@ -18,3 +18,9 @@ Designed to be containerized with **Docker** and deployed to **AWS (ECR + ECS Fa
 - **Cloud:** AWS ECR + ECS Fargate (planned)
 
 ## Project Structure
+├── main.py
+├── static
+│ ├── index.html
+│ ├── styles.css
+│ └── app.js
+└── .gitignore
