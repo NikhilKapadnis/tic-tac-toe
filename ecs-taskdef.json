@@ -1,0 +1,32 @@
+{
+  "family": "tic-tac-toe-task-defination",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::306616136846:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::306616136846:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "tic-tac-toe-container",
+      "image": "REPLACED_BY_GITHUB_ACTIONS",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/tic-tac-toe-task-defination",
+          "awslogs-create-group": "true",
+          "awslogs-region": "ap-south-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
