@@ -21,7 +21,7 @@ def check_winner(board):
         if board[a] and board[a] == board[b] == board[c]:
             return board[a]
     if "" not in board:
-        return "draw"
+        return "draw "
     return None
 
 def ai_move(board):
